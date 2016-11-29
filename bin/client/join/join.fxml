@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" prefHeight="480.0" prefWidth="280.0" spacing="5.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.join.JoinController">
+   <children>
+      <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#joinCancel" text="&lt;-">
+               <HBox.margin>
+                  <Insets right="70.0" />
+               </HBox.margin>
+            </Button>
+            <Label text="회원가입" />
+         </children>
+      </HBox>
+      <ImageView fx:id="imgUpload" fitHeight="100.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/profile.png" />
+         </image>
+      </ImageView>
+      <HBox alignment="CENTER" spacing="20.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#handleBtnSelect" text="사진 추가" />
+            <Button mnemonicParsing="false" onAction="#handleDeletePictureBtn" text="사진 삭제" />
+         </children>
+         <VBox.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </VBox.margin>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="5.0">
+         <children>
+            <Label text="아이디" />
+            <TextField fx:id="txtId" prefWidth="90.0">
+               <HBox.margin>
+                  <Insets left="40.0" />
+               </HBox.margin></TextField>
+            <Button mnemonicParsing="false" onAction="#handleCheckId" prefHeight="25.0" prefWidth="70.0" text="중복체크" />
+         </children>
+         <VBox.margin>
+            <Insets top="5.0" />
+         </VBox.margin>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <Label text="비밀번호" />
+            <PasswordField fx:id="password1" prefHeight="25.0" prefWidth="150.0">
+               <HBox.margin>
+                  <Insets left="33.0" />
+               </HBox.margin>
+            </PasswordField>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <Label text="비밀번호확인" />
+            <PasswordField fx:id="password2" prefHeight="25.0" prefWidth="150.0">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </PasswordField>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <Label fx:id="idLabelOk" textFill="GREEN" />
+            <Label fx:id="idLabel" textFill="RED" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" nodeOrientation="LEFT_TO_RIGHT" prefHeight="100.0" prefWidth="200.0" spacing="40.0">
+         <children>
+            <Label text="성별" />
+            <RadioButton fx:id="maleBtn" mnemonicParsing="false" selected="true" text="남성" userData="남성">
+               <toggleGroup>
+                  <ToggleGroup fx:id="selectSex" />
+               </toggleGroup></RadioButton>
+            <RadioButton fx:id="femaleBtn" mnemonicParsing="false" text="여성" toggleGroup="$selectSex" userData="여성" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="15.0">
+         <children>
+            <Label text="포지션" />
+            <CheckBox fx:id="guardChckBx" mnemonicParsing="false" text="가드" />
+            <CheckBox fx:id="forwardChckBx" mnemonicParsing="false" text="포워드" />
+            <CheckBox fx:id="centerChckBx" mnemonicParsing="false" text="센터" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+         <children>
+            <Label text="키" />
+            <ComboBox fx:id="heightCheck" prefHeight="25.0" prefWidth="150.0" promptText="선택해주세요">
+               <HBox.margin>
+                  <Insets left="65.0" />
+               </HBox.margin>
+            </ComboBox>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="7.0">
+         <children>
+            <Label text="지역" />
+            <ComboBox fx:id="cityCheck" prefHeight="25.0" prefWidth="105.0" />
+            <ComboBox fx:id="boroughCheck" prefHeight="25.0" prefWidth="105.0" />
+         </children>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+         <children>
+            <Label text="실력" />
+            <RadioButton fx:id="rookieBtn" mnemonicParsing="false" selected="true" text="초보" userData="초보">
+               <toggleGroup>
+                  <ToggleGroup fx:id="selectLevel" />
+               </toggleGroup></RadioButton>
+            <RadioButton fx:id="amateurBtn" mnemonicParsing="false" text="중수" toggleGroup="$selectLevel" userData="중수" />
+            <RadioButton fx:id="professBtn" mnemonicParsing="false" text="고수" toggleGroup="$selectLevel" userData="고수" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+         <children>
+            <Button fx:id="joinBtn" mnemonicParsing="false" onAction="#handleJoinBtn" text="가  입  하  기" />
+         </children>
+      </HBox>
+   </children>
+   <padding>
+      <Insets bottom="15.0" left="15.0" right="10.0" top="15.0" />
+   </padding>
+</VBox>

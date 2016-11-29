@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane prefHeight="480.0" prefWidth="280.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.boards.updateBoard.UpdateBoardController">
+   <top>
+      <HBox alignment="CENTER_LEFT" spacing="15.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="cancelBtn" mnemonicParsing="false" onAction="#handleCancelBtn" prefWidth="33.0" text="&lt;-" />
+            <Label fx:id="bnoLbl" text="No.1">
+               <HBox.margin>
+                  <Insets right="20.0" />
+               </HBox.margin>
+            </Label>
+            <Label text="수정하기">
+               <font>
+                  <Font size="20.0" />
+               </font></Label>
+         </children>
+         <padding>
+            <Insets bottom="10.0" />
+         </padding>
+      </HBox>
+   </top>
+   <center>
+      <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <top>
+            <VBox spacing="10.0" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox alignment="CENTER_LEFT" prefWidth="220.0" spacing="5.0">
+                     <children>
+                        <Label text="제목 : " />
+                        <TextField fx:id="titleTxtFld" prefHeight="23.0" prefWidth="175.0" text="방 제목" />
+                     </children>
+                  </HBox>
+                  <Label fx:id="idLbl" text="글쓴이 아이디" />
+                  <HBox alignment="CENTER_LEFT" spacing="10.0">
+                     <children>
+                        <Label text="시간 :" />
+                        <DatePicker fx:id="datePicker" prefHeight="25.0" prefWidth="121.0" />
+                        <ComboBox fx:id="timeCombo" prefHeight="25.0" prefWidth="70.0" promptText="시" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" spacing="10.0">
+                     <children>
+                        <Label text="지역 :" />
+                        <ComboBox fx:id="cityCombo" prefHeight="25.0" prefWidth="100.0" promptText="시" />
+                        <ComboBox fx:id="boroughCombo" prefHeight="23.0" prefWidth="100.0" promptText="구" />
+                     </children>
+                  </HBox>
+                  <TextArea fx:id="contentTxtArea" prefHeight="255.0" prefWidth="260.0" text="내용" wrapText="true" />
+               </children>
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
+            </VBox>
+         </top>
+      </BorderPane>
+   </center>
+   <bottom>
+      <HBox alignment="CENTER" spacing="5.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="updateBtn" mnemonicParsing="false" onAction="#handleUpdateBtn" text=" 수정완료 " />
+         </children>
+         <padding>
+            <Insets top="10.0" />
+         </padding>
+      </HBox>
+   </bottom>
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+</BorderPane>

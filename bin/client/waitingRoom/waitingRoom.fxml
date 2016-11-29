@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.VBox?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="280.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.waitingRoom.waitingRoomController">
+   <children>
+      <VBox alignment="CENTER" prefHeight="480.0" prefWidth="280.0" spacing="10.0">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+               <children>
+                  <Button fx:id="btnSlidingMenu" mnemonicParsing="false" onAction="#handleSlidingMenu" text="三">
+                     <HBox.margin>
+                        <Insets right="65.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Label text="대기목록" />
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </HBox>
+            <TableView prefHeight="250.0">
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+               <columns>
+                  <TableColumn prefWidth="75.0" text="번호" />
+                  <TableColumn prefWidth="75.0" text="제목" />
+                  <TableColumn prefWidth="75.0" text="지역" />
+                  <TableColumn prefWidth="75.0" text="상태" />
+                  <TableColumn prefWidth="75.0" text="인원" />
+               </columns>
+            </TableView>
+            <Label text="접속중인 선수">
+               <padding>
+                  <Insets top="10.0" />
+               </padding>
+            </Label>
+            <TableView fx:id="tableView" prefHeight="164.0" prefWidth="260.0">
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+               <columns>
+                  <TableColumn prefWidth="75.0" text="번호" />
+                  <TableColumn prefWidth="75.0" text="사진" />
+                  <TableColumn prefWidth="75.0" text="아이디" />
+                  <TableColumn prefWidth="75.0" text="지역" />
+                  <TableColumn prefWidth="75.0" text="실력" />
+               </columns>
+            </TableView>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#makeRoomBtn" text="방 만들기" />
+                  <Button mnemonicParsing="false" onAction="#goBoard" text="게시판" />
+                  <Button mnemonicParsing="false" text="바로 시작" />
+                  <Button onAction="#handleEnterBtn" text="입장" />
+               </children>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </VBox>
+   </children>
+</StackPane>

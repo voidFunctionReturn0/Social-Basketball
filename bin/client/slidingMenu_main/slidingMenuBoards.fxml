@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane prefHeight="507.0" prefWidth="200.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.slidingMenu_main.slidingMenuBoardsController">
+	<top>
+	<BorderPane nodeOrientation="RIGHT_TO_LEFT" opacity="0.8" prefHeight="29.0" prefWidth="280.0" style="-fx-background-color: black;">
+			
+			<center>			
+				
+			</center>
+         <padding>
+            <Insets bottom="7.0" left="7.0" right="7.0" top="7.0" />
+         </padding>
+         <bottom>
+      				<Button alignment="CENTER" mnemonicParsing="false" onAction="#handleXBtn" text="X" BorderPane.alignment="CENTER" fx:id="xBtn">
+               <BorderPane.margin>
+                  <Insets right="230.0" />
+               </BorderPane.margin>
+               <font>
+                  <Font size="10.0" />
+               </font>
+      		      </Button>
+         </bottom>
+		</BorderPane>
+	</top>
+   <center>
+		<VBox alignment="TOP_RIGHT" fillWidth="false" minHeight="406.0" minWidth="280.0" opacity="0.7" prefHeight="406.0" prefWidth="280.0" spacing="20.0" style="-fx-background-color: black;">
+		   <children>
+		      <HBox alignment="CENTER_LEFT">
+		         <children>
+		            <ImageView fx:id="imageView" fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+		               <image>
+		                  <Image url="@../images/profile.png" />
+		               </image>
+		               <HBox.margin>
+		                  <Insets />
+		               </HBox.margin>
+		            </ImageView>
+		            <VBox alignment="CENTER">
+		               <children>
+		                  <Label fx:id="idLbl">
+		                     <VBox.margin>
+		                        <Insets />
+		                     </VBox.margin>
+		                  </Label>
+		                  <Label fx:id="levelLbl">
+		                     <VBox.margin>
+		                        <Insets top="30.0" />
+		                     </VBox.margin>
+		                  </Label>
+		               </children>
+		            </VBox>
+		         </children>
+		      </HBox>
+		      <HBox alignment="CENTER_RIGHT" prefHeight="31.0" prefWidth="189.0">
+		         <children>
+		            <VBox prefHeight="31.0" prefWidth="144.0" spacing="3.0">
+		               <children>
+		                  <Label prefHeight="15.0" prefWidth="51.0" text="포지션">
+		                     <font>
+		                        <Font size="10.0" />
+		                     </font>
+		                  </Label>
+		                  <HBox alignment="CENTER_LEFT" prefHeight="15.0" prefWidth="139.0">
+		                     <children>
+		                        <CheckBox fx:id="guardChckBox" mnemonicParsing="false" prefHeight="15.0" prefWidth="42.0" text="가드">
+		                           <font>
+		                              <Font size="10.0" />
+		                           </font>
+		                        </CheckBox>
+		                        <CheckBox fx:id="forwardChckBox" mnemonicParsing="false" prefHeight="15.0" prefWidth="54.0" text="포워드">
+		                           <font>
+		                              <Font size="10.0" />
+		                           </font>
+		                        </CheckBox>
+		                        <CheckBox fx:id="centerChckBox" mnemonicParsing="false" prefHeight="15.0" prefWidth="45.0" text="센터">
+		                           <font>
+		                              <Font size="10.0" />
+		                           </font>
+		                        </CheckBox>
+		                     </children>
+		                  </HBox>
+		               </children>
+		            </VBox>
+		         </children>
+		      </HBox>
+		      <VBox alignment="CENTER_RIGHT" prefHeight="38.0" prefWidth="153.0">
+		         <children>
+		            <Label text="지역">
+		               <VBox.margin>
+		                  <Insets bottom="5.0" />
+		               </VBox.margin>
+                     <font>
+                        <Font size="11.0" />
+                     </font></Label>
+		            <VBox alignment="CENTER_RIGHT" prefHeight="56.0" prefWidth="130.0" spacing="10.0">
+		               <children>
+		                  <ComboBox fx:id="cityCmbBox" nodeOrientation="RIGHT_TO_LEFT" prefHeight="23.0" prefWidth="92.0" promptText="서울시" />
+		                  <ComboBox fx:id="boroughCmbBox" nodeOrientation="RIGHT_TO_LEFT" prefHeight="23.0" prefWidth="104.0" promptText="서대문구" />
+		               </children>
+		            </VBox>
+		         </children>
+		      </VBox>
+		      <Button fx:id="adjustProfileBtn" mnemonicParsing="false" onAction="#handleAdjustProfileBtn" text="정보수정">
+               <font>
+                  <Font size="11.0" />
+               </font></Button>
+		      <Button fx:id="logoutBtn" mnemonicParsing="false" onAction="#handleLogoutBtn" text="로그아웃">
+               <font>
+                  <Font size="11.0" />
+               </font></Button>
+		      <Button fx:id="exitBtn" mnemonicParsing="false" onAction="#handleExitBtn" text="앱 종료">
+               <font>
+                  <Font size="11.0" />
+               </font></Button>
+		   </children>
+		   <padding>
+		      <Insets bottom="15.0" left="15.0" right="15.0" top="20.0" />
+		   </padding>
+		</VBox>
+   </center>
+   <bottom>
+      <BorderPane opacity="0.8" prefHeight="20.0" prefWidth="280.0" style="-fx-background-color: black;" BorderPane.alignment="CENTER" />
+   </bottom>
+</BorderPane>

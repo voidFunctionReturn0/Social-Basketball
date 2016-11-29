@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.VBox?>
+
+<StackPane fx:id="stackPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="280.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.boards.boardsRoomController">
+   <children>
+      <VBox alignment="CENTER" prefHeight="480.0" prefWidth="280.0" spacing="7.0">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+               <children>
+                  <Button fx:id="btnSlidingMenu" mnemonicParsing="false" onAction="#handleSlidingMenu" text="三">
+                     <HBox.margin>
+                        <Insets right="75.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Label text="게시판" />
+                  <Button mnemonicParsing="false" onAction="#handleAllListBtn" text="R">
+                     <HBox.margin>
+                        <Insets left="75.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </HBox>
+            <BorderPane prefHeight="460.0" prefWidth="260.0">
+               <top>
+                  <VBox alignment="CENTER" prefHeight="39.0" prefWidth="260.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <HBox alignment="TOP_CENTER" prefHeight="31.0" prefWidth="260.0" spacing="5.0">
+                           <children>
+                              <ComboBox fx:id="cityCombo" prefHeight="23.0" prefWidth="80.0" />
+                              <ComboBox fx:id="boroughCombo" prefHeight="23.0" prefWidth="92.0" />
+                              <Button fx:id="btnSearch" mnemonicParsing="false" text="검색" />
+                              <!-- <Button fx:id="btnRefresh" mnemonicParsing="false" text="R" /> -->
+                           </children>
+                        </HBox>
+                        <Separator prefWidth="200.0" />
+                     </children>
+                  </VBox>
+               </top>
+               <center>
+                  <StackPane fx:id="boardsRoom_stackPane" prefHeight="332.0" prefWidth="280.0" BorderPane.alignment="CENTER" />
+               </center>
+               <bottom>
+                  <HBox alignment="CENTER" prefHeight="18.0" prefWidth="260.0" spacing="20.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <Button fx:id="btnLeft" mnemonicParsing="false" text="이전" />
+                        <Button fx:id="btnRight" mnemonicParsing="false" text="다음" />
+                     </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <BorderPane.margin>
+                        <Insets />
+                     </BorderPane.margin>
+                     <padding>
+                        <Insets top="5.0" />
+                     </padding>
+                  </HBox>
+               </bottom>
+            </BorderPane>
+            <VBox alignment="CENTER" spacing="5.0">
+               <children>
+                  <Separator prefWidth="200.0" />
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+                     <children>
+                        <Button fx:id="writeBoard" mnemonicParsing="false" onAction="#makeBoard" prefHeight="25.0" prefWidth="257.0" text="글쓰기" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </VBox>
+   </children>
+</StackPane>

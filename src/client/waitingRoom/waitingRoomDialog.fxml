@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="120.0" prefWidth="250.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Button id="btnOk" layoutX="103.0" layoutY="81.0" mnemonicParsing="false" text="확인" />
+      <Label id="textTitle" layoutX="80.0" layoutY="43.0" text="인원이 꽉 찼습니다." />
+      <ImageView fitHeight="44.0" fitWidth="40.0" layoutX="27.0" layoutY="41.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/dialog-warning.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

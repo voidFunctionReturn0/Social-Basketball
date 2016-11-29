@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="233.0" prefWidth="150.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TableView layoutY="29.0" prefHeight="164.0" prefWidth="150.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="아이디" />
+          <TableColumn prefWidth="75.0" text="포지션" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnOutExit" layoutX="80.0" layoutY="201.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="64.0" text="닫기" />
+      <Button fx:id="btnOut" layoutX="8.0" layoutY="201.0" mnemonicParsing="false" text="내보내기" />
+      <Label layoutX="51.0" layoutY="7.0" text="내보내기" />
+   </children>
+</AnchorPane>

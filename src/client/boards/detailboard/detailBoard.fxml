@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.control.ScrollPane?>
+
+<BorderPane prefHeight="480.0" prefWidth="280.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.boards.detailboard.DetailBoardController">
+   <top>
+      <HBox alignment="CENTER_LEFT" BorderPane.alignment="CENTER">
+         <children>
+            <Button mnemonicParsing="false" onAction="#enterList" prefWidth="33.0" text="&lt;-" />
+            <HBox alignment="CENTER" prefWidth="220.0" spacing="5.0">
+               <children>
+                  <Label fx:id="titleLbl" id="detailBoardTitle" text="제목">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                  </Label>
+               </children>
+            </HBox>
+         </children>
+         <padding>
+            <Insets bottom="10.0" />
+         </padding>
+      </HBox>
+   </top>
+   <center>
+      <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <top>
+            <VBox spacing="5.0" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox spacing="5.0">
+                     <children>
+                        <!-- <ImageView fx:id="imgView" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../images/profile.png" />
+                           </image></ImageView> -->
+                        <VBox prefHeight="50.0" prefWidth="161.0">
+                           <children>
+                              <HBox alignment="CENTER_LEFT" spacing="10.0">
+                                 <children>
+                                    <Label text="글쓴이" />
+                                    <Label fx:id="writerLbl" id="detailBoardWriter" />
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" spacing="10.0">
+                                 <children>
+                                    <Label text="지역" />
+                                    <Label fx:id="areaLbl" id="detailBoardArea" text="area" />
+                                 </children>
+                                 <padding>
+                                    <Insets top="10.0" />
+                                 </padding>
+                              </HBox>
+                              <HBox prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                                 <children>
+                                    <Label text="약속 시간" />
+                                    <Label fx:id="timeLbl" id="detailBoardTime" text="starttime" />
+                                 </children>
+                                 <padding>
+                                    <Insets top="10.0" />
+                                 </padding>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <TextArea fx:id="cntntLbl" id="detailBoardContent" editable="false" prefHeight="121.0" prefWidth="260.0" text="내용" wrapText="true" />
+               </children>
+            </VBox>
+         </top>
+         <center>
+            <HBox alignment="CENTER" fillHeight="false" spacing="20.0" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox alignment="CENTER" fillHeight="false" prefWidth="150.0">
+                     <children>
+                        <Label text="같  이  해  요">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <!-- <Label text="댓글 수" />
+                  <Label id="detailBoardCommentCount" text="0" /> -->
+               </children>
+            </HBox>
+         </center>
+         <bottom>
+            <VBox prefHeight="154.0" prefWidth="260.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Separator prefWidth="200.0" />
+                  <StackPane fx:id="detailBoard_stackPane" prefHeight="150.0" prefWidth="200.0" />
+                  <HBox prefHeight="5.0" prefWidth="260.0">
+                     <children>
+                        <TextField fx:id="txt_makeComment" prefHeight="25.0" prefWidth="222.0" />
+                        <Button fx:id="btnMakeComment" mnemonicParsing="false" prefHeight="25.0" prefWidth="47.0" text="작성" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </bottom>
+      </BorderPane>
+   </center>
+   <bottom>
+      <HBox alignment="CENTER" prefHeight="11.0" prefWidth="260.0" spacing="30.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="rewriteBtn" mnemonicParsing="false" onAction="#handleRewriteBtn" text="수정하기" />
+            <Button fx:id="deleteBtn" mnemonicParsing="false" onAction="#handleDeleteBtn" text="삭제하기" />
+         </children>
+         <padding>
+            <Insets top="10.0" />
+         </padding>
+      </HBox>
+   </bottom>
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+</BorderPane>
